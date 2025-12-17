@@ -546,3 +546,16 @@ function clearFilters() {
     updateProductGrid();
     closeFilter();
 }
+
+// Expose functions to window for compatibility with inline HTML event handlers
+window.initHome = initHome;
+window.initNovidades = initNovidades;
+window.clearFilters = clearFilters;
+window.applyFilters = applyFilters;
+window.selectColor = selectColor;
+window.selectSize = selectSize;
+window.changeQty = changeQty;
+window.toggleAccordion = toggleAccordion;
+window.calculateShipping = calculateShipping;
+window.products = products;
+

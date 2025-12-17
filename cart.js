@@ -140,3 +140,11 @@ function formatPrice(value) {
 document.addEventListener('DOMContentLoaded', function () {
     updateCartCount();
 });
+
+// Expose functions to window
+window.addToCart = addToCart;
+window.removeFromCart = removeFromCart;
+window.openCart = openCart;
+window.closeCart = closeCart;
+window.buyNow = buyNow;
+

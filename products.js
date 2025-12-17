@@ -13,10 +13,10 @@ const products = [
         colors: [
             { name: "Rosa", hex: "#E91E63", thumb: "/images/kitten-heel/download.avif" },
             { name: "Preto", hex: "#000000", thumb: "/images/kitten-heel/download (1).avif" },
-            { name: "Branco", hex: "#FFFFFF", thumb: "/images/kitten-heel/download (2).avif" },
-            { name: "Cor 4", hex: "#CCCCCC", thumb: "/images/kitten-heel/download (3).avif" },
-            { name: "Cor 5", hex: "#CCCCCC", thumb: "/images/kitten-heel/download (4).avif" },
-            { name: "Cor 6", hex: "#CCCCCC", thumb: "/images/kitten-heel/download (6).avif" }
+            { name: "Marrom", hex: "#8B4513", thumb: "/images/kitten-heel/download (2).avif" },
+            { name: "Branco", hex: "#FFFFFF", thumb: "/images/kitten-heel/download (3).avif" },
+            { name: "Azul", hex: "#4169E1", thumb: "/images/kitten-heel/download (4).avif" },
+            { name: "Laranja", hex: "#FFA500", thumb: "/images/kitten-heel/download (6).avif" }
         ],
         sizes: ["33/34", "35", "36", "37", "38", "39/40", "41", "42", "43/44"],
         unavailableSizes: []

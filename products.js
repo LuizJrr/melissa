@@ -11,9 +11,9 @@ const products = [
             "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&h=800&fit=crop"
         ],
         colors: [
-            { name: "Rosa", hex: "#E91E63", thumb: "assets/kitten-heel.png" },
-            { name: "Preto", hex: "#000000", thumb: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=100&h=100&fit=crop" },
-            { name: "Branco", hex: "#FFFFFF", thumb: "assets/kitten-heel.png" } // Using placeholder as no white image available
+            { name: "Rosa", hex: "#E91E63", thumb: "assets/Thong Kitten Heel/download.avif" },
+            { name: "Preto", hex: "#000000", thumb: "assets/Thong Kitten Heel/download (1).avif" },
+            { name: "Branco", hex: "#FFFFFF", thumb: "assets/Thong Kitten Heel/download (2).avif" }
         ],
         sizes: ["33/34", "35", "36", "37", "38", "39/40", "41", "42", "43/44"],
         unavailableSizes: []

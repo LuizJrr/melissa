@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades: Lançamentos e Coleções | Melissa Loja Oficial</title>
+    <meta name="description"
+        content="Confira as últimas novidades da Melissa. Lançamentos, novas coleções e muito mais fashion para você.">
+    <link rel="icon" href="https://www.melissa.com.br/file/v5917940377254178082/general/Melissa_favicon_65x65.png"
+        type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="filter.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <!-- Promo Popup (Optional - remove if not wanted on subpages) -->
+    <!-- Keeping for consistency -->
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" aria-label="Fechar">&times;</button>
+            <a href="#">
+                <img src="assets/popup-banner.png" alt="Happy Holidays - Nova Coleção" class="popup-image">
+            </a>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="#">Encontrar Lojas</a>
+                <a href="#">Hello Kitty</a>
+            </div>
+            <div class="top-bar-center">
+                <button class="carousel-arrow left">&lt;</button>
+                <span class="promo-text">FRETE GRÁTIS para todo Brasil em compras acima de R$299</span>
+                <button class="carousel-arrow right">&gt;</button>
+            </div>
+            <div class="top-bar-right">
+                <span>Ajuda</span>
+                <span>Entrar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="index.html" class="logo">
+                <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-logo-melissa.svg"
+                    alt="Melissa">
+            </a>
+
+            <div class="logo-divider"></div>
+
+            <a href="#" class="logo-secondary">
+                <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/minimelissa.svg"
+                    alt="Mini Melissa">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Happy Holidays</a></li>
+                    <li><a href="novidades.html" class="active">Novidades</a></li>
+                    <li><a href="index.html">Calçados</a></li>
+                    <li><a href="#">Coleções</a></li>
+                    <li><a href="#">Bolsas</a></li>
+                    <li><a href="#">Collabs</a></li>
+                    <li><a href="#" class="highlight">OFF</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar por">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <button class="cart-btn" aria-label="Carrinho">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="current">NOVIDADES</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Category Header -->
+            <div class="category-header">
+                <h1>Novidades</h1>
+                <div class="category-actions">
+                    <button class="filter-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        Filtrar
+                    </button>
+                    <div class="sort-dropdown">
+                        <select>
+                            <option>Ordenar por: Relevância</option>
+                            <option>Menor preço</option>
+                            <option>Maior preço</option>
+                            <option>Mais recentes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically via JS -->
+            </div>
+
+            <!-- Filter Sidebar -->
+            <div class="filter-overlay"></div>
+            <aside class="filter-sidebar">
+                <div class="filter-header">
+                    <h2>Filtrar</h2>
+                    <button class="close-filter">&times;</button>
+                </div>
+                <div class="filter-content">
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <h3>Faixa de Preço</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="0-150"> Até R$ 150,00
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="150-250"> R$ 150,00 - R$ 250,00
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="250-999"> Acima de R$ 250,00
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Size Filter -->
+                    <div class="filter-group">
+                        <h3>Tamanho</h3>
+                        <div class="size-filter-grid">
+                            <div class="size-filter-item" data-value="33/34">33/34</div>
+                            <div class="size-filter-item" data-value="35/36">35/36</div>
+                            <div class="size-filter-item" data-value="37/38">37/38</div>
+                            <div class="size-filter-item" data-value="39/40">39/40</div>
+                            <div class="size-filter-item" data-value="41/42">41/42</div>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div class="filter-group">
+                        <h3>Cor</h3>
+                        <div class="color-filter-grid">
+                            <div class="color-filter-item" data-value="Preto">
+                                <div class="color-circle" style="background: #000"></div>
+                                <span class="color-name">Preto</span>
+                            </div>
+                            <div class="color-filter-item" data-value="Rosa">
+                                <div class="color-circle" style="background: #E91E63"></div>
+                                <span class="color-name">Rosa</span>
+                            </div>
+                            <div class="color-filter-item" data-value="Branco">
+                                <div class="color-circle" style="background: #FFF; border: 1px solid #ddd;"></div>
+                                <span class="color-name">Branco</span>
+                            </div>
+                            <div class="color-filter-item" data-value="Bege">
+                                <div class="color-circle" style="background: #F5F5DC"></div>
+                                <span class="color-name">Bege</span>
+                            </div>
+                            <div class="color-filter-item" data-value="Azul">
+                                <div class="color-circle" style="background: #87CEEB"></div>
+                                <span class="color-name">Azul</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-footer">
+                    <button class="clear-filter-btn" onclick="clearFilters()">Limpar</button>
+                    <button class="apply-filter-btn" onclick="applyFilters()">Ver Produtos</button>
+                </div>
+            </aside>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="load-more-btn">Carregar mais produtos</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>CADASTRE-SE E RECEBA NOVIDADES E PROMOÇÕES EXCLUSIVAS</h2>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <button type="submit">CADASTRAR</button>
+            </form>
+            <p class="newsletter-terms">Ao enviar, confirmo que li e aceito os <a href="#">Termos de uso</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SOBRE</h3>
+                    <ul>
+                        <li><a href="about.html">Quem Somos</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Troca</a></li>
+                        <li><a href="#">Cashback</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ATENDIMENTO AO CLIENTE</h3>
+                    <ul>
+                        <li><a href="#">Devoluções</a></li>
+                        <li><a href="#">Informações de entrega</a></li>
+                        <li><a href="#">FAQ/Fale conosco</a></li>
+                        <li><a href="#">Seja um franqueado</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>CONTATO</h3>
+                    <ul>
+                        <li><a href="#">WhatsApp: (54) 99134-5264</a></li>
+                        <li><a href="#">E-mail: melissa@melissa.com.br</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>FORMAS DE PAGAMENTO</h3>
+                    <div class="payment-icons">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-master.svg"
+                            alt="Mastercard">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-visa.svg"
+                            alt="Visa">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-elo.svg"
+                            alt="Elo">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-hipercard.svg"
+                            alt="Hipercard">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-pix.svg"
+                            alt="Pix">
+                        <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/agoravai.svg"
+                            alt="Agoravai">
+                    </div>
+
+                    <h3 style="margin-top: 24px;">AMBIENTE PROTEGIDO</h3>
+                    <div class="security-seals">
+                        <img src="assets/seal-site-blindado.png" alt="Site Blindado Auditado" style="height: 32px;">
+                        <img src="assets/seal-digicert.png" alt="DigiCert Secured" style="height: 32px;">
+                        <img src="assets/seal-reclameaqui.png" alt="Verificada por ReclameAQUI" style="height: 32px;">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">© 2024 Melissa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button class="chat-float" aria-label="Chat de atendimento">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+        </svg>
+    </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <aside class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo-tab active">
+                <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/d2cm-logo-melissa.svg"
+                    alt="Melissa">
+            </div>
+            <div class="mobile-logo-tab inactive">
+                <img src="https://www.melissa.com.br/ccstore/v1/images/?source=/file/general/minimelissa.svg"
+                    alt="Mini Melissa">
+            </div>
+            <button class="mobile-menu-close">&times;</button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="mobile-menu-item">
+                    <a href="#" class="menu-link highlight">Happy Holidays <span>+</span></a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="novidades.html" class="menu-link">Novidades</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="menu-link">Calçados <span>+</span></a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="menu-link">Coleções <span>+</span></a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="menu-link">Bolsas <span>+</span></a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="menu-link">Collabs <span>+</span></a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="menu-link">OFF</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="menu-footer-grid">
+                <a href="#" class="menu-footer-link">Login</a>
+                <a href="#" class="menu-footer-link">Criar conta</a>
+                <a href="#" class="menu-footer-link">Atendimento</a>
+                <a href="#" class="menu-footer-link">Nossas Lojas</a>
+            </div>
+        </div>
+    </aside>
+
+    <script src="menu.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="popup.js"></script>
+    <script>
+        // Init logic for Novidades page
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initNovidades === 'function') {
+                initNovidades();
+            } else {
+                console.error("initNovidades function not found!");
+            }
+        });
+    </script>
+</body>
+
+</html>

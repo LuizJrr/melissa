@@ -11,9 +11,9 @@ const products = [
             "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&h=800&fit=crop"
         ],
         colors: [
-            { name: "Rosa", hex: "#E91E63" },
-            { name: "Preto", hex: "#000000" },
-            { name: "Branco", hex: "#FFFFFF" }
+            { name: "Rosa", hex: "#E91E63", thumb: "assets/kitten-heel.png" },
+            { name: "Preto", hex: "#000000", thumb: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=100&h=100&fit=crop" },
+            { name: "Branco", hex: "#FFFFFF", thumb: "assets/kitten-heel.png" } // Using placeholder as no white image available
         ],
         sizes: ["33/34", "35", "36", "37", "38", "39/40", "41", "42", "43/44"],
         unavailableSizes: []
@@ -230,11 +230,21 @@ function initProductPage() {
     colorsContainer.innerHTML = '';
     currentProduct.colors.forEach((color, index) => {
         const colorBtn = document.createElement('button');
-        colorBtn.className = `color-option ${index === 0 ? 'selected' : ''}`;
-        colorBtn.style.background = color.hex;
-        if (color.hex === '#FFFFFF') {
-            colorBtn.style.border = '1px solid #ddd';
+
+        if (color.thumb) {
+            colorBtn.className = `color-option color-option-image ${index === 0 ? 'selected' : ''}`;
+            const img = document.createElement('img');
+            img.src = color.thumb;
+            img.alt = color.name;
+            colorBtn.appendChild(img);
+        } else {
+            colorBtn.className = `color-option ${index === 0 ? 'selected' : ''}`;
+            colorBtn.style.background = color.hex;
+            if (color.hex === '#FFFFFF') {
+                colorBtn.style.border = '1px solid #ddd';
+            }
         }
+
         colorBtn.onclick = () => selectColor(color, colorBtn);
         colorsContainer.appendChild(colorBtn);
     });
